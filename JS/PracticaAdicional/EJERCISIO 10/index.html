@@ -8,15 +8,16 @@
 <body>
     <script>
         let frase = prompt("Ingresa una frase:");
-let contador = 0;
+let vocales = "";
 
 for (let i = 0; i < frase.length; i++) {
-  if (frase[i].toLowerCase() === 'a') {
-    contador++;
+  let letra = frase[i].toLowerCase();
+  if ("aeiou".includes(letra)) {
+    vocales += letra + " ";
   }
 }
 
-document.write("La letra 'a' aparece " + contador + " veces en la frase.");
+document.write("Las vocales que aparecen en la frase son: " + vocales);
 
     </script>
 </body>
